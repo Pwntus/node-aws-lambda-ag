@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "description": "Tiny AWS Node helper for API Gateway Lambda proxies",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pwntus/node-aws-lambda-ag.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/"
   },
   "keywords": [
     "aws",
