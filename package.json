@@ -1,6 +1,6 @@
 {
   "name": "node-aws-lambda-ag",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tiny AWS Node helper for API Gateway Lambda proxies",
   "main": "index.js",
   "repository": {
