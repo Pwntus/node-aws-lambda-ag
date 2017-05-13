@@ -50,7 +50,7 @@ export default class {
       return
     }
 
-    this.callback(statusCode, {
+    this.callback(null, {
       statusCode,
       headers: {
         'Access-Control-Allow-Origin': '*',
