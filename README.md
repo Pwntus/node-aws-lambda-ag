@@ -64,16 +64,16 @@ constructor(event, params, callback = null)
 // Retrieveing a parameter
 AG.param(name)
 ```
-- **name** (String) - the name of the param to retrieve. If the param was not provided in the request a predefined default value will be returned. If no default value is defined, or the param is non-existing, `null` will be returned.
+- **name** (string) - the name of the param to retrieve. If the param was not provided in the request a predefined default value will be returned. If no default value is defined, or the param is non-existing, `null` will be returned.
 
 ```javascript
 // Sending a success response
 AG.success(response)
 ```
-- **response** (Object) - send a status 200 response with the provided object.
+- **response** (object) - send a status 200 response with the provided object.
 
 ```javascript
 // Sending a failed response
 AG.failure(response)
 ```
-- **response** (Object) - send a status 500 response with the provided object.
+- **response** (object) - send a status 500 response with the provided object.
