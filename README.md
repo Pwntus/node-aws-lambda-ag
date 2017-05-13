@@ -53,28 +53,27 @@ export const main = (event, context, callback) => {
 If a callback method is provided and a required parameter isn't found, a failed response will automatically be issued.
 
 ## API
-**Constructor**
 ```javascript
 constructor(event, params, callback = null)
 ```
-- **event** (Object) - the AWS Lambda [event](http://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html)
-- **params** (Array) - your predefined params
-- **callback** (Function, optional) - the [callback](http://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html#nodejs-prog-model-handler-callback) function used by responses
+- **event** (object) - the AWS Lambda [event](http://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html)
+- **params** (array) - your predefined params
+- **callback** (function, optional) - the [callback](http://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html#nodejs-prog-model-handler-callback) function used by responses
 
-**Retrieveing a parameter**
 ```javascript
+// Retrieveing a parameter
 AG.param(name)
 ```
-- **name** (String) - the name of the param to retrieve. If the param was not provided by the request the predefined default will be returned. If no default is set or the param is non-existing, `null` will be returned.
+- **name** (String) - the name of the param to retrieve. If the param was not provided in the request a predefined default value will be returned. If no default value is defined, or the param is non-existing, `null` will be returned.
 
-**Sending a success response**
 ```javascript
+// Sending a success response
 AG.success(response)
 ```
 - **response** (Object) - send a status 200 response with the provided object.
 
-**Sending a failed response**
 ```javascript
+// Sending a failed response
 AG.failure(response)
 ```
 - **response** (Object) - send a status 500 response with the provided object.
