@@ -1,4 +1,4 @@
-export default class {
+module.exports = class AG {
   constructor (event = null, params = null, callback = null) {
     if (typeof callback === 'function')
       this.callback = callback
@@ -40,8 +40,9 @@ export default class {
     this.buildResponse(200, body)
   }
 
-  failure (body) {
-    this.buildResponse(500, body)
+  failure (body, statusCode = 500) {
+    if (typeof statusCode !== 'number') statusCode = 500
+    this.buildResponse(statusCode, body)
   }
 
   buildResponse (statusCode, body) {
